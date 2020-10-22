@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>RSVP</title>
+  </head>
+  <body>
+    
+    <h1>Already RSVP'd:</h1>
+    {% for guest in guest_list %}
+    {% if guest.rsvp == True %}
+    <h2>{{guest.name}}</h2>
+    {% endif %}
+    {% endfor %}
+    <h1>Still need an RSVP from: </h1>
+    {% for guest in guest_list %}
+    {% if guest.rsvp != True %}
+    <h2>{{guest.name}}</h2>
+    {% endif %}
+    {% endfor %}
+     
+
+
+    
+  </body>
+</html>
